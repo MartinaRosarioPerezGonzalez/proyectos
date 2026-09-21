@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLGA | Compartí tu Momento</title>
+    <link href="./img/Logo-OLGA02.png" rel="icon" type="image/png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="./css/styles.css" rel="stylesheet"/>
+</head>
+<body class="d-flex flex-column min-vh-100 tab-formulario-link">
+    <!-- MAIN -->
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
+    <!-- Franja con logos y bordes -->
+        <section class="franja-logos position-relative bg-light py-0">
+            <!-- Borde superior -->
+            <img src="./img/rasgado-top.png" width="100%" alt="Borde superior" />
+            <!-- Marquee de logos -->
+            <div class="logo-marquee-wrapper py-1 bg-white">
+                <div class="logo-marquee d-flex align-items-center justify-content-start">
+                    <img src="./img/Gol_Gana.png" height="65" alt="Logo">
+                    <img src="./img/Mi_Primo_es_Asi.png" height="65" alt="Logo">
+                    <img src="./img/Paraiso_Fiscal.png" height="65" alt="Logo">
+                    <img src="./img/Seria_Increible.png" height="65" alt="Logo">
+                    <img src="./img/Soñe_que_Volaba.png" height="65" alt="Logo">
+                    <img src="./img/Tapados_de_Laburo.png" height="65" alt="Logo">
+                    <img src="./img/TDT.png" height="65" alt="Logo">
+                    <img src="./img/Gol_Gana.png" height="65" alt="Logo">
+                    <img src="./img/Mi_Primo_es_Asi.png" height="65" alt="Logo">
+                    <img src="./img/Paraiso_Fiscal.png" height="65" alt="Logo">
+                    <img src="./img/Seria_Increible.png" height="65" alt="Logo">
+                    <img src="./img/Soñe_que_Volaba.png" height="65" alt="Logo">
+                    <img src="./img/Tapados_de_Laburo.png" height="65" alt="Logo">
+                    <img src="./img/TDT.png" height="65" alt="Logo">
+
+                </div>
+            </div>
+            <!-- Borde inferior -->
+            <img src="./img/rasgado-bottom.png" width="100%" alt="Borde inferior" />
+            <!-- Card centrado y superpuesto -->
+            <div class="position-absolute top-50 start-50 translate-middle z-3" style="width: 100%; max-width: 700px;">
+                <!-- Logo OLGA superpuesto -->
+                <img id="img-logo" src="./img/Logo-OLGA-Azul.png"
+                    alt="Logo OLGA"
+                    class="position-absolute start-50 translate-middle-x"/>
+                <!-- Card con doble borde -->
+                <div id="borde-rojo" class="border-azul-olga border border-5 p-2 rounded-4 bg-transparent">
+                    <div id="borde-azul" class="border outer-border border-5 rounded-4 bg-light shadow p-5 pt-5">
+                        <div class="mt-5">
+                            <div class="tab-content" id="uploadTabsContent">
+                                <!-- TAB 3: Enviar LINK -->
+                                <div class="tab-pane fade show active" id="tab-link" role="tabpanel" aria-labelledby="tab-link-tab">
+                                    <div class="franja-superior-rojo"></div>
+                                    <div class="position-relative z-1">
+                                        <h2 class="fw-bold text-white text-center mb-1 titulo-formulario">Envía tu Link</h2>
+                                        <form class="mt-2 formulario-video" id="formLink" autocomplete="off" novalidate>
+                                            <div class="form-group mb-1">
+                                                <label for="linkVideo" class="form-label fw-bold">Link del video (YouTube, Instagram, TikTok)</label>
+                                                <div class="url-input-container">
+                                                    <input type="url" class="form-control url-input" id="linkVideo" name="linkVideo" placeholder="https://" />
+                                                </div>
+                                            </div>
+                                            <!-- Programa destino -->
+                                            <div class="mb-2">
+                                              <label for="programaLink" class="form-label fw-bold">¿Para qué programa es el video?</label>
+                                              <select class="form-select" id="programaLink">
+                                                <option value="">Seleccioná un programa</option>
+                                                <option value="tdt">TDT</option>
+                                                <option value="golgana">Gol Gana</option>
+                                                <option value="primo">Mi Primo es Así</option>
+                                                <option value="Paraiso">Paraíso fiscal</option>
+                                                <option value="Increible">Sería increíble</option>
+                                                <option value="Laburo">Tapados de laburo</option>
+                                                <option value="Volaba">Soñé que volaba</option>
+                                                <option value="Cualquiera">Me da igual</option>
+                                              </select>
+                                            </div>
+                                            <!-- Checkbox -->
+                                            <div class="form-check mb-1 text-start">
+                                              <input class="form-check-input" type="checkbox" value="" id="aceptoLink">
+                                              <label class="form-check-label fw-semibold" for="aceptoLink">
+                                                Acepto que el video puede ser compartido en vivo por OLGA.
+                                              </label>
+                                            </div>                             
+                                            <!-- Botón -->
+                                            <a href="index.html" id="btn-volver-link" type="button" class="btn btn-enviar-link fw-bold px-3 py-1 me-2 rounded-pill">
+                                              <i class="bi bi-arrow-left-circle me-2"></i>Volver
+                                            </a>
+                                            <button type="button" class="btn btn-enviar-link fw-bold px-3 py-1 rounded-pill" id="btn-enviar-link">
+                                              <i class="bi bi-link me-2"></i>ENVÍAR LINK
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  <!-- FOOTER -->
+    <footer class="bg-dark text-center text-white py-4 mt-auto">
+        <div class="mb-2">
+          <a href="https://www.youtube.com/@olgaenvivo_" target="_blank" rel="noopener noreferrer" class="fs-4 text-white mx-auto px-3"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/olgaenvivo/" target="_blank" rel="noopener noreferrer" class="fs-4 text-white mx-auto px-3"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@olgaenvivo" target="_blank" rel="noopener noreferrer" class="fs-4 text-white mx-auto px-3"><i class="fab fa-tiktok"></i></a>
+          <a href="https://x.com/olgaenvivo" target="_blank" rel="noopener noreferrer" class="fs-4 text-white mx-auto px-3"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.twitch.tv/olgaenvivo" target="_blank" rel="noopener noreferrer" class="fs-4 text-white mx-auto px-3"><i class="fab fa-twitch"></i></a>
+        </div>
+        <div class="text-center mt-3">
+          DEVELOPED & POWERED BY <img src="./img/Logo-IBM.png" alt="IBM Logo" height="20"/>
+        </div>
+    </footer>
+    <script src="./js/mainLink.js"></script>
+</body>
+</html>
+
+

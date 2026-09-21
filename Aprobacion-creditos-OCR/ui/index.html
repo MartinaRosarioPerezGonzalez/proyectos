@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeLoan — Evaluación de Solicitud de Préstamo Hipotecario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ╔══════════════════════════════════════════════╗ -->
+    <!-- ║  NAVBAR                                      ║ -->
+    <!-- ╚══════════════════════════════════════════════╝ -->
+    <nav class="navbar-hogares">
+        <div class="navbar-inner">
+            <a class="navbar-brand" href="#">
+                <span class="navbar-brand-text">HomeLoan</span>
+            </a>
+            <div class="navbar-actions">
+                <a href="#personas-section" class="navbar-link">Evaluaciones</a>
+                <a href="#personas-section" class="navbar-cta">Simulá tu crédito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ╔══════════════════════════════════════════════╗ -->
+    <!-- ║  HERO — compact banner only                  ║ -->
+    <!-- ╚══════════════════════════════════════════════╝ -->
+    <header class="hero-hogares hero-compact">
+        <div class="hero-overlay"></div>
+        <div class="hero-content hero-content-compact">
+            <div class="hero-text-block">
+                <h1 class="hero-headline">Evaluación Crediticia Hipotecaria</h1>
+                <p class="hero-tagline">
+                    Asistida por IA — DemoBank
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ╔══════════════════════════════════════════════╗ -->
+    <!-- ║  PERSONAS SECTION — below hero               ║ -->
+    <!-- ╚══════════════════════════════════════════════╝ -->
+    <section id="personas-section" class="personas-section">
+        <div class="personas-section-inner">
+            <div class="personas-section-header">
+                <div>
+                    <h2 class="personas-section-title">Solicitantes</h2>
+                    <p class="personas-section-desc">Seleccioná un solicitante para ver su perfil y analizar su solicitud con IA.</p>
+                </div>
+                <span class="personas-count-badge" id="personas-count-badge"></span>
+            </div>
+            <!-- Cards rendered by JS -->
+            <div id="personas-grid" class="personas-grid-outer">
+                <div class="personas-loading">
+                    <div class="mini-spinner"></div>
+                    <span>Cargando solicitantes…</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════════╗ -->
+    <!-- ║  PERSONA DETAIL — inline below personas      ║ -->
+    <!-- ╚══════════════════════════════════════════════╝ -->
+    <section id="persona-detail-section" style="display:none;" class="persona-detail-section">
+        <div class="personas-section-inner">
+
+            <div class="persona-detail-header">
+                <button id="back-to-list-btn" class="btn-back">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    Volver a la lista
+                </button>
+                <h2 class="persona-detail-title" id="persona-detail-name"></h2>
+            </div>
+
+            <!-- 4-column profile grid -->
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <div class="profile-card-label">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 8h4M7 12h4M15 8h2M15 12h2"/></svg>
+                        RENAPER — Identidad
+                    </div>
+                    <div id="renaper-table"></div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-card-label">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        BCRA — Historial Crediticio
+                    </div>
+                    <div id="bcra-table"></div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-card-label">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        AFIP — Situación Fiscal
+                    </div>
+                    <div id="afip-table"></div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-card-label">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+                        Propiedad Asignada
+                    </div>
+                    <div id="propiedad-table"></div>
+                </div>
+            </div>
+
+            <!-- Payslip preview — 3 tabs (mes-2, mes-1, mes actual) -->
+            <div class="payslip-preview-wrap">
+                <div class="payslip-preview-header">
+                    <div>
+                        <div class="payslip-preview-label">Recibos de Sueldo Generados (3 meses)</div>
+                        <div class="payslip-preview-hint">3 recibos consecutivos generados con los datos del solicitante — serán analizados por la IA.</div>
+                    </div>
+                    <button id="analyze-persona-btn" class="btn-analyze btn-analyze-inline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:7px;vertical-align:-2px"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        Analizar con IA
+                    </button>
+                </div>
+                <!-- Tab buttons -->
+                <div class="payslip-tabs" id="payslip-tabs">
+                    <button class="payslip-tab active" data-idx="0">Dos meses atrás</button>
+                    <button class="payslip-tab" data-idx="1">Mes anterior</button>
+                    <button class="payslip-tab" data-idx="2">Más actual</button>
+                </div>
+                <pre id="payslip-preview" class="payslip-preview-pre"></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════════╗ -->
+    <!-- ║  PASOS                                       ║ -->
+    <!-- ╚══════════════════════════════════════════════╝ -->
+    <section class="pasos-section">
+        <img src="assets/building1.webp" alt="" class="pasos-img pasos-img-left">
+        <img src="assets/home1.webp" alt="" class="pasos-img pasos-img-right">
+        <div class="pasos-center">
+            <h2 class="pasos-title">Pasos para acceder a tu vivienda</h2>
+            <div class="pasos-track">
+                <div class="paso-item">
+                    <span class="paso-circle">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                    </span>
+                    <span class="paso-label">Elegí al solicitante</span>
+                </div>
+                <div class="paso-connector"></div>
+                <div class="paso-item">
+                    <span class="paso-circle">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </span>
+                    <span class="paso-label">Análisis con IA</span>
+                </div>
+                <div class="paso-connector"></div>
+                <div class="paso-item">
+                    <span class="paso-circle">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+                    </span>
+                    <span class="paso-label">Decisión</span>
+                </div>
+                <div class="paso-connector"></div>
+                <div class="paso-item">
+                    <span class="paso-circle">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>
+                    </span>
+                    <span class="paso-label">Tu casa propia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════════════╗ -->
+    <!-- ║  RESULTS                                     ║ -->
+    <!-- ╚══════════════════════════════════════════════╝ -->
+    <main class="main-content">
+        <div class="main-inner">
+            <section id="results-section" style="display:none;">
+
+                <div class="section-header results-step-row">
+                    <div class="section-step-badge">Análisis IA</div>
+                    <div style="flex:1;min-width:0;">
+                        <h2 class="section-title">Resultado del Análisis</h2>
+                    </div>
+                    <div class="results-actions">
+                        <button class="btn-ghost" id="download-json-btn">Exportar JSON</button>
+                        <button class="btn-ghost" id="copy-results">Copiar</button>
+                    </div>
+                </div>
+
+                <!-- Recommendation Panel -->
+                <div id="recomendacion-panel" class="recomendacion-panel">
+                    <div class="semaforo-col">
+                        <div id="semaforo-light" class="semaforo-light"></div>
+                        <span id="semaforo-label" class="semaforo-label"></span>
+                    </div>
+                    <div class="recomendacion-body">
+                        <div class="recomendacion-top">
+                            <span id="recomendacion-decision" class="recomendacion-decision"></span>
+                            <span class="recomendacion-advisory">Sujeto a revisión humana</span>
+                        </div>
+                        <p id="recomendacion-resumen" class="recomendacion-resumen"></p>
+                        <ul id="recomendacion-razones" class="recomendacion-razones"></ul>
+                    </div>
+                </div>
+
+                <!-- Conditions observed -->
+                <details class="condiciones-details">
+                    <summary class="condiciones-summary">Condiciones observadas</summary>
+                    <ul id="condiciones-list" class="condiciones-list"></ul>
+                </details>
+
+                <!-- Data grid -->
+                <div class="data-grid">
+                    <div class="data-card">
+                        <h3 class="data-card-title">Solicitante</h3>
+                        <div id="solicitante-table"></div>
+                    </div>
+                    <div class="data-card">
+                        <h3 class="data-card-title">Empleo e Ingresos</h3>
+                        <div id="empleo-table"></div>
+                    </div>
+                </div>
+
+                <!-- Historial de Haberes -->
+                <div id="haberes-historico-section" class="haberes-historico-card" style="display:none;">
+                    <h3 class="data-card-title">Historial de Haberes (3 meses)</h3>
+                    <div id="haberes-historico-table"></div>
+                </div>
+
+                <!-- Validaciones -->
+                <div class="validaciones-card">
+                    <h3 class="data-card-title">Validaciones de Identidad</h3>
+                    <div id="validaciones-table"></div>
+                </div>
+
+                <!-- Alertas -->
+                <div id="alertas-section" class="alertas-card" style="display:none;">
+                    <h3 class="data-card-title data-card-title-warn">Alertas de Extracción</h3>
+                    <div id="alertas-container"></div>
+                </div>
+
+
+                <!-- Decision Panel -->
+                <div class="decision-panel" id="decision-panel">
+                    <h3 class="decision-panel-title">Decisión del Analista</h3>
+                    <p class="decision-panel-hint">La decisión será notificada por email al solicitante.</p>
+                    <div class="decision-buttons-row">
+                        <button class="btn-decision btn-decision-aprobar" id="btn-aprobar">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:-2px"><polyline points="20 6 9 17 4 12"/></svg>
+                            Aprobar
+                        </button>
+                        <button class="btn-decision btn-decision-esperar" id="btn-esperar">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:-2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Esperar
+                        </button>
+                        <button class="btn-decision btn-decision-rechazar" id="btn-rechazar">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:-2px"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            Rechazar
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" style="display:none;">
+        <div class="loading-card">
+            <div class="loading-spinner"></div>
+            <p class="loading-title" id="loading-text">Procesando…</p>
+            <p class="loading-detail" id="loading-detail"></p>
+            <div class="loading-steps" id="loading-steps"></div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast-notification" class="toast-notification" style="display:none;"></div>
+
+    <!-- Footer -->
+    <footer class="footer-bna">
+        <div class="footer-inner">
+            <span class="footer-brand">HomeLoan</span>
+            <span class="footer-legal">DemoBank &copy; 2026 — Sistema de Asistencia a la Evaluación Crediticia</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

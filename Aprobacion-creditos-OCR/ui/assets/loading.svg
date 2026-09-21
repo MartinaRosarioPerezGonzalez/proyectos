@@ -1,0 +1,247 @@
+<svg id="erkbxQyNuTM1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 1000 1000" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+    project-id="a7588746338d49b0b6a6c6a7118374aa" export-id="bb10a04c7ec74e47a63eb57f88d1b63e" cached="false"
+    style="background-color:transparent">
+    <style>
+        <![CDATA[
+        #erkbxQyNuTM2_ts {
+            animation: erkbxQyNuTM2_ts__ts 4004ms linear infinite normal forwards
+        }
+
+        @keyframes erkbxQyNuTM2_ts__ts {
+            0% {
+                transform: translate(500.63px, 559.38px) scale(1.35, 1.35)
+            }
+
+            25% {
+                transform: translate(500.63px, 559.38px) scale(1.35, 1.35);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            27.497502% {
+                transform: translate(500.63px, 559.38px) scale(1.425, 1.425);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            29.995005% {
+                transform: translate(500.63px, 559.38px) scale(1.2875, 1.2875);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            32.492507% {
+                transform: translate(500.63px, 559.38px) scale(1.35, 1.35);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            34.99001% {
+                transform: translate(500.63px, 559.38px) scale(1.3, 1.3);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            37.512488% {
+                transform: translate(500.63px, 559.38px) scale(1.35, 1.35);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            40.00999% {
+                transform: translate(500.63px, 559.38px) scale(1.3125, 1.3125);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            42.507493% {
+                transform: translate(500.63px, 559.38px) scale(1.35, 1.35)
+            }
+
+            100% {
+                transform: translate(500.63px, 559.38px) scale(1.35, 1.35)
+            }
+        }
+
+        #erkbxQyNuTM4 {
+            animation: erkbxQyNuTM4_s_da 4004ms linear infinite normal forwards
+        }
+
+        @keyframes erkbxQyNuTM4_s_da {
+            0% {
+                strokeDasharray: 0, 348.79, 0, 0
+            }
+
+            5.844156% {
+                strokeDasharray: 0, 348.79, 0, 0;
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            24.175824% {
+                strokeDasharray: 0, 0, 348.77, 0.01;
+                animation-timing-function: cubic-bezier(0.1665, 0, 0.8335, 1)
+            }
+
+            73.326673% {
+                strokeDasharray: 0, 0, 348.77, 0.01;
+                animation-timing-function: cubic-bezier(0.1665, 0, 0.8335, 1)
+            }
+
+            90.834166% {
+                strokeDasharray: 0, 0, 0, 348.79
+            }
+
+            100% {
+                strokeDasharray: 0, 0, 0, 348.79
+            }
+        }
+
+        #erkbxQyNuTM6 {
+            animation: erkbxQyNuTM6_s_da 4004ms linear infinite normal forwards
+        }
+
+        @keyframes erkbxQyNuTM6_s_da {
+            0% {
+                strokeDasharray: 0, 169.68, 0, 0
+            }
+
+            5.844156% {
+                strokeDasharray: 0, 169.68, 0, 0;
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            24.175824% {
+                strokeDasharray: 0, 0, 169.68, 0;
+                animation-timing-function: cubic-bezier(0.1665, 0, 0.8335, 1)
+            }
+
+            73.326673% {
+                strokeDasharray: 0, 0, 169.68, 0;
+                animation-timing-function: cubic-bezier(0.1665, 0, 0.8335, 1)
+            }
+
+            90.834166% {
+                strokeDasharray: 0, 0, 0, 169.68
+            }
+
+            100% {
+                strokeDasharray: 0, 0, 0, 169.68
+            }
+        }
+
+        #erkbxQyNuTM7_ts {
+            animation: erkbxQyNuTM7_ts__ts 4004ms linear infinite normal forwards
+        }
+
+        @keyframes erkbxQyNuTM7_ts__ts {
+            0% {
+                transform: translate(502.5px, 505px) scale(1.35, 1.35)
+            }
+
+            25.824176% {
+                transform: translate(502.5px, 505px) scale(1.35, 1.35);
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            50% {
+                transform: translate(502.5px, 505px) scale(1.9125, 1.9125)
+            }
+
+            100% {
+                transform: translate(502.5px, 505px) scale(1.9125, 1.9125)
+            }
+        }
+
+        #erkbxQyNuTM7 {
+            animation: erkbxQyNuTM7_c_o 4004ms linear infinite normal forwards
+        }
+
+        @keyframes erkbxQyNuTM7_c_o {
+            0% {
+                opacity: 0
+            }
+
+            25.574426% {
+                opacity: 0;
+                animation-timing-function: step-end
+            }
+
+            25.824176% {
+                opacity: 1;
+                animation-timing-function: cubic-bezier(0.333, 0, 0.667, 1)
+            }
+
+            50% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        #erkbxQyNuTM18_tr {
+            animation: erkbxQyNuTM18_tr__tr 4004ms linear infinite normal forwards
+        }
+
+        @keyframes erkbxQyNuTM18_tr__tr {
+            0% {
+                transform: translate(135.33781px, 207.03926px) rotate(720deg);
+                animation-timing-function: cubic-bezier(0.415, 0.08, 0.115, 0.955)
+            }
+
+            100% {
+                transform: translate(135.33781px, 207.03926px) rotate(345.6deg)
+            }
+        }
+
+        #erkbxQyNuTM19_tr {
+            animation: erkbxQyNuTM19_tr__tr 4004ms linear infinite normal forwards
+        }
+
+        @keyframes erkbxQyNuTM19_tr__tr {
+            0% {
+                transform: translate(11.12px, 29.9px) rotate(-720deg);
+                animation-timing-function: cubic-bezier(0.415, 0.08, 0.115, 0.955)
+            }
+
+            100% {
+                transform: translate(11.12px, 29.9px) rotate(-345.6deg)
+            }
+        }
+        ]]>
+    </style>
+    <defs>
+        <linearGradient id="erkbxQyNuTM12-fill" x1="0.5" y1="0" x2="0.5" y2="1" spreadMethod="pad"
+            gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+            <stop id="erkbxQyNuTM12-fill-0" offset="0%" stop-color="rgba(255,255,255,0)" />
+            <stop id="erkbxQyNuTM12-fill-1" offset="100%" stop-color="#010022" />
+        </linearGradient>
+    </defs>
+    <g id="erkbxQyNuTM2_ts" transform="translate(500.63,559.38) scale(1.35,1.35)">
+        <g transform="translate(-101.611,-143.278)">
+            <g transform="translate(101.678 103.161)">
+                <path id="erkbxQyNuTM4"
+                    d="M-0.001,-40.081c0,0-45.01,37.104-45.01,37.104c0,.054-.013.133-.04.237-.026.102-.039.18-.039.232c0,0,0,37.575,0,37.575c0,1.359.496,2.534,1.488,3.522.992.992,2.165,1.49,3.523,1.49c0,0,30.056,0,30.056,0s0-30.061,0-30.061s20.044,0,20.044,0s0,30.063,0,30.063s30.06,0,30.06,0c1.356,0,2.531-.498,3.521-1.492.99-.986,1.488-2.163,1.488-3.522c0,0,0-37.575,0-37.575c0-.206-.027-.366-.078-.469c0,0-45.013-37.104-45.013-37.104Z"
+                    paint-order="stroke fill markers" fill="none" fill-rule="evenodd" stroke="#3652ad" strokeWidth="4"
+                    stroke-miterlimit="10" strokeDasharray="0,348.79,0,0" />
+            </g>
+            <g transform="translate(101.521 72.875)">
+                <path id="erkbxQyNuTM6"
+                    d="M52.531,21.589c0,0-16.638-14.2-16.638-14.2s0-20.296,0-20.296c0-.613-.196-1.119-.593-1.515-.393-.397-.899-.593-1.515-.593c0,0-6.058,0-6.058,0-.615,0-1.121.196-1.516.593-.394.396-.591.902-.591,1.515c0,0,0,12.855,0,12.855s-25.493-21.764-25.493-21.764-52.413,43.405-52.413,43.405c-.089.069-.172.145-.245.227"
+                    paint-order="stroke fill markers" fill="none" fill-rule="evenodd" stroke="#3652ad" strokeWidth="4"
+                    strokeLinecap="round" stroke-miterlimit="10" strokeDasharray="0,169.68,0,0" />
+            </g>
+        </g>
+    </g>
+    <g id="erkbxQyNuTM7_ts" transform="translate(502.5,505) scale(1.35,1.35)">
+        <g id="erkbxQyNuTM7" transform="translate(-103,-103)" opacity="0">
+            <g transform="translate(101.678 103.161)">
+                <path
+                    d="M-0.001,-40.081c0,0-45.01,37.104-45.01,37.104c0,.054-.013.133-.04.237-.026.102-.039.18-.039.232c0,0,0,37.575,0,37.575c0,1.359.496,2.534,1.488,3.522.992.992,2.165,1.49,3.523,1.49c0,0,30.056,0,30.056,0s0-30.061,0-30.061s20.044,0,20.044,0s0,30.063,0,30.063s30.06,0,30.06,0c1.356,0,2.531-.498,3.521-1.492.99-.986,1.488-2.163,1.488-3.522c0,0,0-37.575,0-37.575c0-.206-.027-.366-.078-.469c0,0-45.013-37.104-45.013-37.104Z"
+                    paint-order="stroke fill markers" fill="none" fill-rule="evenodd" stroke="#fe7a36" strokeWidth="4"
+                    stroke-miterlimit="10" />
+            </g>
+            <g transform="translate(101.521 72.875)">
+                <path
+                    d="M52.531,21.589c0,0-16.638-14.2-16.638-14.2s0-20.296,0-20.296c0-.613-.196-1.119-.593-1.515-.393-.397-.899-.593-1.515-.593c0,0-6.058,0-6.058,0-.615,0-1.121.196-1.516.593-.394.396-.591.902-.591,1.515c0,0,0,12.855,0,12.855s-25.493-21.764-25.493-21.764-52.413,43.405-52.413,43.405c-.089.069-.172.145-.245.227"
+                    paint-order="stroke fill markers" fill="none" fill-rule="evenodd" stroke="#fe7a36" strokeWidth="4"
+                    strokeLinecap="round" stroke-miterlimit="10" />
+            </g>
+        </g>
+    </g>
+</svg>
