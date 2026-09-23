@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OLGA | Compartí tu Momento</title>
-    <link href="./img/Logo-OLGA02.png" rel="icon" type="image/png"/>
+    <link href="./img/logo-olga02.png" rel="icon" type="image/png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
     <link href="./css/styles.css" rel="stylesheet"/>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 body-error">
     <!-- MAIN -->
     <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
     <!-- Franja con logos y bordes -->
@@ -21,20 +21,20 @@
             <!-- Marquee de logos -->
             <div class="logo-marquee-wrapper py-1 bg-white">
                 <div class="logo-marquee d-flex align-items-center justify-content-start">
-                    <img src="./img/Gol_Gana.png" height="65" alt="Logo">
-                    <img src="./img/Mi_Primo_es_Asi.png" height="65" alt="Logo">
-                    <img src="./img/Paraiso_Fiscal.png" height="65" alt="Logo">
-                    <img src="./img/Seria_Increible.png" height="65" alt="Logo">
-                    <img src="./img/Soñe_que_Volaba.png" height="65" alt="Logo">
-                    <img src="./img/Tapados_de_Laburo.png" height="65" alt="Logo">
-                    <img src="./img/TDT.png" height="65" alt="Logo">
-                    <img src="./img/Gol_Gana.png" height="65" alt="Logo">
-                    <img src="./img/Mi_Primo_es_Asi.png" height="65" alt="Logo">
-                    <img src="./img/Paraiso_Fiscal.png" height="65" alt="Logo">
-                    <img src="./img/Seria_Increible.png" height="65" alt="Logo">
-                    <img src="./img/Soñe_que_Volaba.png" height="65" alt="Logo">
-                    <img src="./img/Tapados_de_Laburo.png" height="65" alt="Logo">
-                    <img src="./img/TDT.png" height="65" alt="Logo">
+                    <img src="./img/gol_gana.png" height="65" alt="Logo">
+                    <img src="./img/mi_primo_es_asi.png" height="65" alt="Logo">
+                    <img src="./img/paraiso_fiscal.png" height="65" alt="Logo">
+                    <img src="./img/seria_increible.png" height="65" alt="Logo">
+                    <img src="./img/soñe_que_volaba.png" height="65" alt="Logo">
+                    <img src="./img/tapados_de_laburo.png" height="65" alt="Logo">
+                    <img src="./img/tdt.png" height="65" alt="Logo">
+                    <img src="./img/gol_gana.png" height="65" alt="Logo">
+                    <img src="./img/mi_primo_es_asi.png" height="65" alt="Logo">
+                    <img src="./img/paraiso_fiscal.png" height="65" alt="Logo">
+                    <img src="./img/seria_increible.png" height="65" alt="Logo">
+                    <img src="./img/soñe_que_volaba.png" height="65" alt="Logo">
+                    <img src="./img/tapados_de_laburo.png" height="65" alt="Logo">
+                    <img src="./img/tdt.png" height="65" alt="Logo">
                 </div>
             </div>
             <!-- Borde inferior -->
@@ -42,10 +42,9 @@
             <!-- Card centrado y superpuesto -->
             <div class="position-absolute top-50 start-50 translate-middle z-3" style="width: 100%; max-width: 700px;">
                 <!-- Logo OLGA superpuesto -->
-                <img id="img-logo" src="./img/Logo-OLGA.png"
+                <img id="img-logo" src="./img/logo-olga.png"
                     alt="Logo OLGA"
-                    class="position-absolute start-50 translate-middle-x"
-                    style="top: -75px; max-height: 210px; z-index: 2" />
+                    class="position-absolute start-50 translate-middle-x" />
                 <!-- Card con doble borde -->
                 <div id="borde-rojo" class="outer-border border border-5 p-2 rounded-4 bg-transparent">
                     <div id="borde-azul" class="border border-azul-olga border-5 rounded-4 bg-light shadow p-5 pt-5">
@@ -55,10 +54,10 @@
                                 <div class="tab-pane fade show active text-center" id="tab-error" role="tabpanel" aria-labelledby="tab-error-tab">
                                     <div class="position-relative my-3 z-1">
                                       <i class="bi bi-x-circle-fill fs-1 text-danger"></i>
-                                      <h1 class="fw-bold text-dark text-center mb-2">NO PUDIMOS COMPARTIR TU MOMENTO</h2>
+                                      <h1 class="fw-bold text-dark text-center mb-2 titulo-error">NO PUDIMOS COMPARTIR TU MOMENTO</h2>
                                       <hr>
-                                      <p class="fs-4">DEBIDO A UN ERROR INESPERADO NO PUDIMOS ACCEDER A TU VIDEO.</p>
-                                      <a href="index.html" type="button" id="btn-volver-a-intentarlo" class="btn btn-enviar-link fw-bold fs-5 px-3 mb-2 rounded-pill">
+                                      <p class="fs-4 p-error">Debido a un error inesperado no puedimos acceder a tu video.</p>
+                                      <a href="./index.html" type="button" id="btn-volver-a-intentarlo" class="btn btn-enviar-link fw-bold fs-5 px-3 mb-2 rounded-pill">
                                           <i class="bi bi-camera2 me-2"></i>
                                           VOLVER A INTENTARLO
                                       </a>
@@ -81,7 +80,7 @@
           <a href="https://www.twitch.tv/olgaenvivo" target="_blank" rel="noopener noreferrer" class="fs-4 text-white mx-auto px-3"><i class="fab fa-twitch"></i></a>
         </div>
         <div class="text-center mt-3">
-          DEVELOPED & POWERED BY <img src="./img/Logo-IBM.png" alt="IBM Logo" height="20"/>
+          DEVELOPED & POWERED BY <img src="./img/logo-ibm.png" alt="IBM Logo" height="20"/>
         </div>
     </footer>
 </body>

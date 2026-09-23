@@ -8,9 +8,28 @@ async function subirVideo(event) {
   const archivoInput = document.getElementById("inputArchivo");
   const programa = document.getElementById("programaArchivo").value;
   const acepta = document.getElementById("aceptoArchivo").checked;
+  const spinner = document.getElementById("spinner-video");
+  const form = document.getElementById("formVideo");
+  const nombre = (document.getElementById("inputNombre")?.value || "").trim();
+
 
   if (!archivoInput.files.length) {
     alert("Por favor, seleccioná un archivo.");
+    return;
+  }
+
+  const archivo = archivoInput.files[0];
+
+  // ✅ Validación de tipo de archivo: solo videos
+  if (!archivo.type.startsWith("video/")) {
+    alert("Solo se permiten archivos de video.");
+    return;
+  }
+
+  // ✅ Validación de tamaño (100 MB máximo)
+  const maxSizeMB = 100;
+  if (archivo.size > maxSizeMB * 1024 * 1024) {
+    alert(`El video no puede superar los ${maxSizeMB} MB.`);
     return;
   }
 
@@ -25,12 +44,15 @@ async function subirVideo(event) {
   }
 
   const formData = new FormData();
-  formData.append("video", archivoInput.files[0]);
+  formData.append("video", archivo);
   formData.append("programa", programa);
   formData.append("acepto", acepta);
+  formData.append("usuario", nombre);
+  spinner.classList.remove("d-none");
+  form.classList.add("d-none");
 
   try {
-    const response = await fetch("http://localhost:3000/upload", {
+    const response = await fetch("/upload", {
       method: "POST",
       body: formData
     });
@@ -42,16 +64,14 @@ async function subirVideo(event) {
     const resultado = await response.json();
     console.log("✅ Video subido:", resultado);
 
-    // Redirige al HTML de éxito
-    window.location.href = "./indexExito.html";
+    window.location.href = "./indexexito.html";
   } catch (error) {
     console.error("❌ Error:", error);
-
-    // Redirige al HTML de error (le faltaba ".html")
-    window.location.href = "./indexError.html";
+    window.location.href = "./indexerror.html";
+  } finally {
+    spinner.classList.add("d-none");
   }
-  
-
 }
+
 
 

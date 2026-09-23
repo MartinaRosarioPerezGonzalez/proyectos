@@ -1,0 +1,904 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+.OswaldVariable {
+    font-family: 'Oswald', sans-serif !important;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+body {
+  background-image: url(../img/fondo-hueso.png);
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.border-azul-olga {
+  border-color: #202c44 !important;
+  border-style: solid !important;
+}
+
+.outer-border {
+  border-color: #c81c3c !important;
+  border-style: solid !important;
+}
+
+.logo-marquee-wrapper {
+  overflow-x: hidden;        /* 🔒 Oculta cualquier desborde horizontal */
+  width: 100%;               /* 🔧 Se adapta al ancho disponible */
+  max-width: 100vw;          /* 🔒 Nunca excede el ancho de la pantalla */
+  box-sizing: border-box;    /* 🔧 Asegura que padding no expanda */
+}
+
+
+.logo-marquee {
+  display: flex;
+  gap: 40px;
+  animation: scroll-logos 50s linear infinite;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+
+@keyframes scroll-logos {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+
+#btn-archivo {
+    background-color: #1b2a49; 
+    border: none;
+}
+
+#btn-archivo:hover {
+    background-color: #121d31; 
+    border: none;
+}
+
+#btn-link {
+background-color: #d72638; 
+border: none;
+}
+
+#btn-link:hover {
+background-color: #851722; 
+border: none;
+}
+
+.franja-superior-azul {
+  background-color: #202c44;
+  height: 145px;                /* Alto visual de la franja */
+  width: 96%;
+  border-top-left-radius: 1rem; /* Opcional: suaviza bordes */
+  border-top-right-radius: 1rem;
+  position: absolute;
+  top: 11px;                   /* Asoma por arriba del container */
+  left: 2%;
+  z-index: 0;                   /* Por detrás del texto */
+}
+
+.franja-superior-rojo {
+  background-color: #c81c3c;
+  height: 145px;                /* Alto visual de la franja */
+  width: 96%;
+  border-top-left-radius: 1rem; /* Opcional: suaviza bordes */
+  border-top-right-radius: 1rem;
+  position: absolute;
+  top: 11px;                   /* Asoma por arriba del container */
+  left: 2%;
+  z-index: 0;                   /* Por detrás del texto */
+}
+
+.tab-pane {
+  z-index: 1;
+}
+
+.btn-enviar-video {
+    background-color: #c81c3c;
+    color: white;
+}
+
+.btn-enviar-video:hover {
+    background-color:#851722;
+    color: white;
+}
+
+.btn-enviar-link {
+    background-color: #202c44;
+    color: white;
+}
+
+.btn-enviar-link:hover {
+    background-color:#121d31;
+    color: white;
+}
+
+#btn-volver-video {
+    background: #d1cece;
+    color: #202c44;
+}
+
+#btn-volver-video:hover {
+    background: #969595;
+    color: #202c44;
+}
+
+#btn-volver-link {
+    background: #d1cece;
+    color: #851722;
+}
+
+#btn-volver-link:hover {
+    background: #969595;
+    color: #851722;
+}
+
+#img-logo {
+  top: -70px;
+  max-height: 200px;
+  z-index: 2;
+}
+
+.titulo-subida {
+  font-size: 3rem;         /* Escritorio */
+  text-align: center;
+  line-height: 1.2;
+}
+
+.titulo-formulario {
+  font-size: 2.1rem;
+  line-height: 0.9;
+}
+
+  @media (max-width: 767px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(../img/fondo-hueso.png);
+    font-family: 'BebasNeue', sans-serif;
+  }
+  body > * {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .logo-marquee-wrapper {
+    display: none !important;
+  }
+  .logo-marquee {
+    display: none !important;
+  }
+
+  #img-logo {
+      top: -60px;         /* Lo sube más */
+      max-height: 250px;   /* Lo agranda */
+  }
+  .outer-border {
+    position: relative;
+    top: 30px;
+  }
+  .titulo-subida {
+  position: relative;
+  top: 10px;
+  font-size: clamp(3.3rem, 6vw, 3rem);
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.botones-subida {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #btn-archivo,
+  #btn-link {
+    position: relative;
+    top: -5px !important;
+    width: 80%;            /* Ocupa casi toda la pantalla */
+    font-size: 1.4rem;      /* Texto más grande */
+    padding: 3rem;          /* Más alto */
+    justify-content: center; /* Centra ícono y texto */
+  }
+  .separador-custom {
+    margin-top: 2rem;
+  }
+  .texto-informativo {
+    font-size: 1.6rem !important;
+    margin-top: 2rem !important;
+    padding: 0 0rem !important;
+  }
+
+  body.tab-formulario #img-logo {
+      top: -45px;         /* Lo sube más */
+      max-height: 250px;   /* Lo agranda */
+  }
+  body.tab-formulario .outer-border {
+    position: relative;
+    top: 50px !important;
+  }
+
+  .titulo-formulario {
+    font-size: 3.5rem;
+    padding-top: 2.5rem; /* si querés bajarlo visualmente */
+    text-align: center;
+  }
+  .franja-superior-azul {
+    height: 215px; /* Ajustalo según lo que necesites */
+  }
+
+  body.tab-formulario .formulario-video {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin-top: 2rem !important;
+    margin: 0 auto;            /* 🔥 Esto centra el formulario dentro del contenedor */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* 🔥 Esto alinea los campos al centro */
+  }
+
+  body.tab-formulario .formulario-video > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body.tab-formulario .formulario-video .form-check {
+    align-items: flex-start; /* Para que el checkbox no quede centrado */
+  }
+
+  body.tab-formulario form .mb-1,
+  body.tab-formulario form .mb-2,
+  body.tab-formulario form .form-check {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 1.3rem !important;
+  }
+
+  body.tab-formulario form .form-label {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  body.tab-formulario form .form-control,
+  body.tab-formulario form .form-select,
+  body.tab-formulario form .form-check-input {
+    font-size: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+  }
+
+  body.tab-formulario form .form-check-input {
+    width: 3%;
+  }
+
+  body.tab-formulario form .form-check-label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  body.tab-formulario .formulario-video .form-check {
+    display: flex;
+    flex-direction: row;       /* 👈 Fuerza a que estén lado a lado */
+    align-items: center;       /* Centra verticalmente con el texto */
+    gap: 0.5rem;               /* Espacio entre checkbox y texto */
+    margin-top: 0rem;
+  }
+
+  body.tab-formulario .formulario-video .form-check-input {
+    margin-top: 0 !important;  /* Evita que el checkbox se alinee arriba */
+  }
+
+  body.tab-formulario .formulario-video .form-check-label {
+    font-size: 1rem;
+  }
+
+  #btn-volver-video,
+  #btn-subir-video {
+    display: block;
+    width: 70%;               /* Ocupan todo el ancho */
+    font-size: 1.4rem;         /* Tamaño de texto mayor */
+    padding: 1rem 1.2rem;      /* Más altos */
+    margin-top: -1rem;          /* Separación con el contenido anterior */
+    text-align: center;
+    justify-content: center;
+  }
+
+  #btn-subir-video {
+    margin-top: 1rem;        /* Espacio respecto al botón anterior */
+  }
+
+  body.tab-formulario-link .formulario-video {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin-top: 2rem !important;
+    margin: 0 auto;            /* 🔥 Esto centra el formulario dentro del contenedor */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* 🔥 Esto alinea los campos al centro */
+  }
+
+  body.tab-formulario-link .formulario-video > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body.tab-formulario-link .formulario-video .form-check {
+    align-items: flex-start; /* Para que el checkbox no quede centrado */
+  }
+
+  body.tab-formulario-link form .mb-1,
+  body.tab-formulario-link form .mb-2,
+  body.tab-formulario-link form .form-check {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 1.3rem !important;
+  }
+
+  body.tab-formulario-link form .form-label {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  body.tab-formulario-link form .form-control,
+  body.tab-formulario-link form .form-select,
+  body.tab-formulario-link form .form-check-input {
+    font-size: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+  }
+
+  body.tab-formulario-link form .form-check-input {
+    width: 5%;
+  }
+
+  body.tab-formulario-link form .form-check-label {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+  }
+
+  body.tab-formulario-link .formulario-video .form-check {
+    display: flex;
+    flex-direction: row;       /* 👈 Fuerza a que estén lado a lado */
+    align-items: center;       /* Centra verticalmente con el texto */
+    gap: 0.5rem;               /* Espacio entre checkbox y texto */
+    margin-top: 0rem;
+  }
+
+  body.tab-formulario-link .formulario-video .form-check-input {
+    margin-top: 0 !important;  /* Evita que el checkbox se alinee arriba */
+  }
+
+  body.tab-formulario-link .formulario-video .form-check-label {
+    font-size: 1rem;
+  }
+
+  #btn-volver-link,
+  #btn-enviar-link {
+    display: block;
+    width: 70%;               /* Ocupan todo el ancho */
+    font-size: 1.6rem;         /* Tamaño de texto mayor */
+    padding: 1rem 1.2rem;      /* Más altos */
+    margin-top: -1rem;          /* Separación con el contenido anterior */
+    text-align: center;
+    justify-content: center;
+    line-height: 1.2;
+  }
+
+  #btn-enviar-link {
+    margin-top: 1rem;        /* Espacio respecto al botón anterior */
+    margin-bottom: -1rem;
+  }
+
+  body.body-exito #img-logo {
+      top: -53px;         /* Lo sube más */
+      max-height: 250px;   /* Lo agranda */
+  }
+
+  body.body-exito .outer-border {
+    position: relative !important;
+    top: 37px !important;
+  }
+
+  body.body-exito .bi-check-circle-fill {
+    position: relative;
+    font-size: 5rem !important; /* Aplica a todos los que tengan esta clase */
+    top:20px !important;
+}
+
+  .titulo-exito {
+  position: relative;
+  top: 10px;
+  font-size: clamp(2.7rem, 6vw, 3rem);
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+ .p-exito {
+  position: relative;
+  top: 10px;
+  font-size: clamp(2rem, 6vw, 3rem) !important;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+ }
+
+ #btn-volver-inicio {
+  display: block;
+  width: 90%;
+  font-size: 1.4rem !important;
+  padding: 1rem 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem !important;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+body.body-error #img-logo {
+      top: -53px;         /* Lo sube más */
+      max-height: 250px;    /* Lo agranda */
+  }
+
+  body.body-error .outer-border {
+    position: relative !important;
+    top: 37px !important;
+  }
+  body.body-error .bi-x-circle-fill {
+    position: relative;
+    font-size: 5rem !important; /* Aplica a todos los que tengan esta clase */
+    top:20px !important;
+}
+
+.titulo-error {
+  position: relative;
+  top: 10px;
+  font-size: clamp(3rem, 6vw, 3rem);
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.p-error {
+  position: relative;
+  top: 10px;
+  font-size: clamp(1.5rem, 6vw, 3rem) !important;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+ #btn-volver-a-intentarlo {
+  display: block;
+  width: 90%;
+  font-size: 1.4rem !important;
+  padding: 1rem 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem !important;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+}
+
+  @media (max-width: 415px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url(../img/fondo-hueso.png);
+    font-family: 'BebasNeue', sans-serif;
+  }
+  body > * {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .logo-marquee-wrapper {
+    display: none !important;
+  }
+  .logo-marquee {
+    display: none !important;
+  }
+
+  #img-logo {
+      top: -40px;         /* Lo sube más */
+      max-height: 250px;   /* Lo agranda */
+  }
+  .outer-border {
+    position: relative;
+    top: 50px;
+  }
+  .titulo-subida {
+  position: relative;
+  top: 10px;
+  font-size: clamp(3rem, 6vw, 3rem);
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.botones-subida {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #btn-archivo,
+  #btn-link {
+    position: relative;
+    top: -5px !important;
+    width: 80%;            /* Ocupa casi toda la pantalla */
+    font-size: 1.4rem;      /* Texto más grande */
+    padding: 3rem;          /* Más alto */
+    justify-content: center; /* Centra ícono y texto */
+  }
+  .separador-custom {
+    margin-top: 2rem;
+  }
+  .texto-informativo {
+    font-size: 1.4rem !important;
+    margin-top: 2rem !important;
+    padding: 0 0rem !important;
+  }
+
+  body.tab-formulario #img-logo {
+      top: -40px;         /* Lo sube más */
+      max-height: 250px;   /* Lo agranda */
+  }
+  body.tab-formulario .outer-border {
+    position: relative;
+    top: 50px !important;
+  }
+
+  .titulo-formulario {
+    font-size: 3rem;
+    padding-top: 2.5rem; /* si querés bajarlo visualmente */
+    text-align: center;
+  }
+  .franja-superior-azul {
+    height: 200px; /* Ajustalo según lo que necesites */
+  }
+
+  body.tab-formulario .formulario-video {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin-top: 2rem !important;
+    margin: 0 auto;            /* 🔥 Esto centra el formulario dentro del contenedor */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* 🔥 Esto alinea los campos al centro */
+  }
+
+  body.tab-formulario .formulario-video > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body.tab-formulario .formulario-video .form-check {
+    align-items: flex-start; /* Para que el checkbox no quede centrado */
+  }
+
+  body.tab-formulario form .mb-1,
+  body.tab-formulario form .mb-2,
+  body.tab-formulario form .form-check {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    margin-bottom: 1.5rem !important;
+  }
+
+  body.tab-formulario form .form-label {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  body.tab-formulario form .form-control,
+  body.tab-formulario form .form-select,
+  body.tab-formulario form .form-check-input {
+    font-size: 1rem;
+    padding: 0.60rem;
+    width: 100%;
+  }
+
+  body.tab-formulario form .form-check-input {
+    width: 5%;
+  }
+
+  body.tab-formulario form .form-check-label {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  body.tab-formulario .formulario-video .form-check {
+    display: flex;
+    flex-direction: row;       /* 👈 Fuerza a que estén lado a lado */
+    align-items: center;       /* Centra verticalmente con el texto */
+    gap: 0.5rem;               /* Espacio entre checkbox y texto */
+    margin-top: 0.2rem;
+  }
+
+  body.tab-formulario .formulario-video .form-check-input {
+    margin-top: 0 !important;  /* Evita que el checkbox se alinee arriba */
+  }
+
+  body.tab-formulario .formulario-video .form-check-label {
+    font-size: 1.2rem;
+  }
+
+  #btn-volver-video,
+  #btn-subir-video {
+    display: block;
+    width: 70%;               /* Ocupan todo el ancho */
+    font-size: 1.2rem;         /* Tamaño de texto mayor */
+    padding: 1rem 1.2rem;      /* Más altos */
+    margin-top: -1rem;          /* Separación con el contenido anterior */
+    text-align: center;
+    justify-content: center;
+  }
+
+  #btn-subir-video {
+    margin-top: 1rem;        /* Espacio respecto al botón anterior */
+  }
+
+  body.tab-formulario-link .formulario-video {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin-top: 2rem !important;
+    margin: 0 auto;            /* 🔥 Esto centra el formulario dentro del contenedor */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* 🔥 Esto alinea los campos al centro */
+  }
+
+  body.tab-formulario-link .formulario-video > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body.tab-formulario-link .formulario-video .form-check {
+    align-items: flex-start; /* Para que el checkbox no quede centrado */
+  }
+
+  body.tab-formulario-link form .mb-1,
+  body.tab-formulario-link form .mb-2,
+  body.tab-formulario-link form .form-check {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    margin-bottom: 1.5rem !important;
+  }
+
+  body.tab-formulario-link form .form-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  body.tab-formulario-link form .form-control,
+  body.tab-formulario-link form .form-select,
+  body.tab-formulario-link form .form-check-input {
+    font-size: 1rem;
+    padding: 0.60rem;
+    width: 100%;
+  }
+
+  body.tab-formulario-link form .form-check-input {
+    width: 5%;
+  }
+
+  body.tab-formulario-link form .form-check-label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  body.tab-formulario-link .formulario-video .form-check {
+    display: flex;
+    flex-direction: row;       /* 👈 Fuerza a que estén lado a lado */
+    align-items: center;       /* Centra verticalmente con el texto */
+    gap: 0.5rem;               /* Espacio entre checkbox y texto */
+    margin-top: 0.2rem;
+  }
+
+  body.tab-formulario-link .formulario-video .form-check-input {
+    margin-top: 0 !important;  /* Evita que el checkbox se alinee arriba */
+  }
+
+  body.tab-formulario-link .formulario-video .form-check-label {
+    font-size: 1.2rem;
+  }
+
+  #btn-volver-link,
+  #btn-enviar-link {
+    display: block;
+    width: 70%;               /* Ocupan todo el ancho */
+    font-size: 1.2rem;         /* Tamaño de texto mayor */
+    padding: 1rem 1.2rem;      /* Más altos */
+    margin-top: 0rem;          /* Separación con el contenido anterior */
+    text-align: center;
+    justify-content: center;
+    line-height: 1.2;
+  }
+
+  #btn-enviar-link {
+    margin-top: 1rem;        /* Espacio respecto al botón anterior */
+    margin-bottom: -1rem;
+  }
+
+  body.body-exito #img-logo {
+      top: -45px;         /* Lo sube más */
+      max-height: 250px;   /* Lo agranda */
+  }
+
+  body.body-exito .outer-border {
+    position: relative !important;
+    top: 45px !important;
+  }
+
+  body.body-exito .bi-check-circle-fill {
+    position: relative;
+    font-size: 5rem !important; /* Aplica a todos los que tengan esta clase */
+    top:10px !important;
+}
+
+  .titulo-exito {
+  position: relative;
+  top: 10px;
+  font-size: clamp(2.4rem, 6vw, 3rem);
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+ .p-exito {
+  position: relative;
+  top: 10px;
+  font-size: clamp(1.2rem, 6vw, 3rem) !important;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+ }
+
+ #btn-volver-inicio {
+  display: block;
+  width: 90%;
+  font-size: 1.3rem !important;
+  padding: 1rem 1.2rem;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+body.body-error #img-logo {
+      top: -45px;         /* Lo sube más */
+      max-height: 250px;   /* Lo agranda */
+  }
+
+  body.body-error .outer-border {
+    position: relative !important;
+    top: 45px !important;
+  }
+  body.body-error .bi-x-circle-fill {
+    position: relative;
+    font-size: 5rem !important; /* Aplica a todos los que tengan esta clase */
+    top:10px !important;
+}
+
+.titulo-error {
+  position: relative;
+  top: 10px;
+  font-size: clamp(2.4rem, 6vw, 3rem);
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.p-error {
+  position: relative;
+  top: 10px;
+  font-size: clamp(1.2rem, 6vw, 3rem) !important;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;       /* Centra el texto */
+  margin-left: auto;        /* Centra el bloque horizontalmente */
+  margin-right: auto;
+  display: block;           /* Asegura comportamiento de bloque */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+ #btn-volver-a-intentarlo {
+  display: block;
+  width: 90%;
+  font-size: 1.5rem !important;
+  padding: 1rem 1.2rem;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+}
+
+  @media screen and (width: 1024px) and (height: 600px) {
+
+  #img-logo {
+      top: -25px;         /* Lo sube más */
+      max-height: 150px;   /* Lo agranda */
+  }
+}

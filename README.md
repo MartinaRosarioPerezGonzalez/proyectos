@@ -35,9 +35,9 @@ Workshop de dos laboratorios: pipeline de inventario en tiempo real con Confluen
 ---
 
 ### [OLGA — Compartí tu Momento](OLGA/)
-Frontend para que fans de OLGA suban videos o links de sus momentos favoritos con los programas del canal.
+Plataforma fullstack para que fans de OLGA suban videos o links de sus momentos favoritos. El backend descarga el contenido, lo procesa y lo sube automáticamente a las carpetas de Google Drive del canal.
 
-**Stack:** HTML, CSS, JavaScript, Bootstrap
+**Stack:** Node.js, Express, Python, yt-dlp, Google Drive API, HTML, CSS, JavaScript, Bootstrap 5
 
 ---
 

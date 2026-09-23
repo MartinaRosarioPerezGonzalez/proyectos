@@ -47,3 +47,10 @@ secrets/
 recibos_sueldo/
 tests/
 oic-i-agentic-ai-tutorials/
+
+# ── OLGA backend ─────────────────────────────────────────────
+OLGA/backend/node_modules/
+OLGA/backend/token.json
+OLGA/backend/token.pickle
+OLGA/backend/cookies.txt
+OLGA/backend/servicios/uploads/
